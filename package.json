@@ -1,0 +1,39 @@
+{
+  "name": "gm",
+  "description": "gm",
+  "repository": {
+    "type": "git",
+    "url": "github:0xdavinchee/gm"
+  },
+  "author": {
+    "name": "0xdavinchee",
+    "email": "0xdavinchee@gmail.com"
+  },
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf out cache node_modules",
+    "build": "hardhat compile && forge build",
+    "coverage": "forge coverage --report lcov",
+    "dev": "nodemon -e sol -x pnpm test",
+    "fmt": "forge fmt",
+    "test": "forge test -vvv",
+    "size": "hardhat size-contracts",
+    "gas": "forge test --gas-report",
+    "snapshot": "forge snapshot",
+    "snapshot-diff": "forge snapshot --diff",
+    "slither": "slither ."
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "@openzeppelin/contracts": "^4.8.2",
+    "@openzeppelin/hardhat-upgrades": "^1.22.1",
+    "hardhat": "^2.13.0",
+    "hardhat-address-exporter": "^0.0.4",
+    "hardhat-contract-sizer": "^2.8.0",
+    "hardhat-deploy": "^0.11.25",
+    "hardhat-preprocessor": "^0.1.5",
+    "nodemon": "^2.0.22",
+    "solhint": "^3.4.1"
+  }
+}
